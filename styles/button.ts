@@ -1,0 +1,42 @@
+import { Colors } from "@/constants/Colors";
+import { StyleSheet } from "react-native";
+
+export const stylesButton = StyleSheet.create({
+    container: {
+        flexDirection: "row",
+        justifyContent: "flex-start",
+        alignItems: "center",
+        padding: 5,
+        width: "100%",
+        height: 60,
+        backgroundColor: Colors.buttonBackgroud,
+        borderRadius: 4,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 1,
+        },
+        shadowOpacity: 0.20,
+        shadowRadius: 1.41,
+
+        elevation: 2,
+    },
+    leftContainer: {
+        flexDirection: "row-reverse",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: 15,
+    },
+    rightContainer: {
+        position: "absolute",
+        right: 5,
+    },
+    textTitle: {
+        fontSize: 20,
+        fontFamily: "Lato-Regular",
+    },
+    containerText: {
+        flexDirection: "column",
+        gap: 5,
+    },
+});
