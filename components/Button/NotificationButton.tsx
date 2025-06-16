@@ -12,7 +12,7 @@ type ButtonProps = {
 const NotificationButton = ({ label, icon, description }: ButtonProps) => {
     if (description) {
         return (
-            <TouchableOpacity style={[stylesButton.container, { height: 70 }]}>
+            <TouchableOpacity style={[stylesButton.container, { height: 65 }]}>
                 <View style={stylesButton.leftContainer}>
                     <View style={stylesButton.containerText}>
                         <Text style={stylesButton.textTitle}>{label}</Text>
@@ -44,7 +44,7 @@ const NotificationButton = ({ label, icon, description }: ButtonProps) => {
                 <Text style={stylesButton.textTitle}>{label}</Text>
                 <Ionicons
                     name="notifications-outline"
-                    size={35}
+                    size={30}
                     color={Colors.iconColor}
                 />
             </View>
