@@ -28,6 +28,8 @@ export default function RootLayout() {
         options={{
           headerShown: false,
           presentation: "modal",
+          animation: "slide_from_bottom",
+          animationDuration: 2000,
         }}
       />
     </Stack>

@@ -47,4 +47,13 @@ export const stylesHome = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
     },
+    modalOpen: {
+        justifyContent: "center",
+        alignItems: "center",
+        position: "absolute",
+        bottom: "5%",
+    },
+    textHelp: {
+        fontSize: 16,
+    },
 });
