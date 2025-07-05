@@ -1,7 +1,7 @@
 import { Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { stylesButton } from "@/styles/button";
-import { Entypo, Ionicons } from "@expo/vector-icons";
+import { Entypo, EvilIcons, Ionicons } from "@expo/vector-icons";
 import { Colors } from "@/constants/Colors";
 
 type ButtonProps = {
@@ -33,7 +33,8 @@ const NotificationButton = ({ label, icon, description }: ButtonProps) => {
                     />
                 </View>
                 <View style={stylesButton.rightContainer}>
-                    <Entypo name="chevron-small-right" size={40} />
+                    <EvilIcons name="chevron-right" size={40} />
+                    {/* <Entypo name="chevron-small-right" size={40} /> */}
                 </View>
             </TouchableOpacity>
         );
@@ -49,7 +50,7 @@ const NotificationButton = ({ label, icon, description }: ButtonProps) => {
                 />
             </View>
             <View style={stylesButton.rightContainer}>
-                <Entypo name="chevron-small-right" size={40} />
+                <EvilIcons name="chevron-right" size={40} />
             </View>
         </TouchableOpacity>
     );

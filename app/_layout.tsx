@@ -8,6 +8,7 @@ export default function RootLayout() {
     "Lato-Regular": require("../assets/fonts/Lato-Regular.ttf"),
     "Lato-Thin": require("../assets/fonts/Lato-Thin.ttf"),
     "Lato-Light": require("../assets/fonts/Lato-Light.ttf"),
+    "Lato-SemiBold": require("../assets/fonts/Lato-SemiBold.ttf"),
   });
   return (
     <Stack>
