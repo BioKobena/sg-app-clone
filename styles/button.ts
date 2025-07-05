@@ -32,7 +32,7 @@ export const stylesButton = StyleSheet.create({
     },
     textTitle: {
         fontSize: 20,
-        fontFamily: "Lato-Regular",
+        fontFamily: "Lato-SemiBold",
     },
     containerText: {
         flexDirection: "column",

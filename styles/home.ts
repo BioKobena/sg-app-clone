@@ -13,7 +13,7 @@ export const stylesHome = StyleSheet.create({
         width: "50%",
         height: "20%",
         position: "absolute",
-        top: "10%",
+        top: "0%",
     },
     image: {
         width: "100%",
@@ -25,13 +25,17 @@ export const stylesHome = StyleSheet.create({
         flexDirection: "column",
         gap: 15,
     },
+    amountContainer: {
+
+        width: "100%",
+    },
     accessButton: {
         width: "100%",
         margin: 30,
         justifyContent: "center",
         alignItems: "center",
         position: "absolute",
-        bottom: "10%",
+        bottom: "7%",
     },
     slide: {
         justifyContent: "center",
@@ -39,10 +43,11 @@ export const stylesHome = StyleSheet.create({
         // backgroundColor: "#9DD6EB",
         height: "100%",
         width: "100%",
+        // flexDirection:"column",
     },
     swiperContainer: {
         width: "100%",
-        height: "30%",
+        height: "40%",
         padding: 15,
         justifyContent: "center",
         alignItems: "center",
@@ -51,7 +56,7 @@ export const stylesHome = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         position: "absolute",
-        bottom: "5%",
+        bottom: "2%",
     },
     textHelp: {
         fontSize: 16,

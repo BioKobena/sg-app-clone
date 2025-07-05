@@ -3,10 +3,10 @@ import { StyleSheet } from "react-native";
 
 export const stylesAccessButton = StyleSheet.create({
     container: {
-        backgroundColor: Colors.primary,
+        backgroundColor: Colors.redPrimary,
         alignItems: "center",
         justifyContent: "center",
-        width: "70%",
+        width: "60%",
         height: 50,
         borderRadius: 50,
         padding: 5,

@@ -22,6 +22,11 @@ import Animated, {
   withDelay,
   withTiming,
 } from "react-native-reanimated";
+import { AnimatedCircularProgress } from "react-native-circular-progress";
+import { Circle } from "react-native-svg";
+import Amount from "@/components/Button/Amount";
+import { useState } from "react";
+import SimpleButton from "@/components/Button/SimpleButton";
 
 type Props = {
   isOpen: boolean;
@@ -129,6 +134,11 @@ const sheetStyles = StyleSheet.create({
 });
 
 export default function Index() {
+  const [viewAmount, setViewAmount] = useState(false);
+  const toggleAmount = () => {
+    setViewAmount(!viewAmount);
+  };
+
   return (
     <View
       style={stylesHome.container}
@@ -143,18 +153,65 @@ export default function Index() {
       <View style={stylesHome.swiperContainer}>
         <Swiper
           buttonWrapperStyle={{
-            backgroundColor: Colors.primary,
-            width: 30,
-            height: 30,
+            backgroundColor: "#FFF",
+            width: 15,
+            padding: 5,
+          }}
+          paginationStyle={{
+            top: "65%",
+            borderColor: "red",
+            borderStyle: "solid",
+            // left: 10,
+          }}
+          activeDotColor={Colors.primary}
+          activeDotStyle={{
+            borderWidth: 7,
+            borderColor: Colors.primary,
+            borderBlockColor: "transparent",
+            borderRadius:15
+          }}
+          dotStyle={{
+            backgroundColor: "rgba(0, 0, 0, 0.2)",
+            width: 10,
+            height: 10,
+            borderRadius: 50,
           }}
           showsPagination={true}
           loop={true}
         >
           <View style={stylesHome.slide}>
-            <Jauge progress={10} />
+            <AnimatedCircularProgress
+              size={250}
+              width={20}
+              style={{
+                position: "absolute",
+                bottom: 0,
+                borderRadius: 50,
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+              fill={5}
+              tintColor="#8ac926"
+              backgroundColor="rgba(0, 0, 0, 0.1)"
+              arcSweepAngle={200}
+              rotation={-100}
+              lineCap="round"
+              renderCap={({ center }) => (
+                <Circle cx={center.x} cy={center.y} r="10" fill="transparent" />
+              )}
+            >
+              {() => (
+                <TouchableOpacity
+                  onPress={toggleAmount}
+                  style={stylesHome.amountContainer}
+                >
+                  <Amount see={viewAmount} />
+                </TouchableOpacity>
+              )}
+            </AnimatedCircularProgress>
           </View>
           <View style={stylesHome.slide}>
-            <Text>Slide 2</Text>
+            <SimpleButton />
           </View>
         </Swiper>
       </View>
