@@ -5,4 +5,5 @@ export const Colors = {
     primary: "#ff220c",
     black: "#28282B",
     redPrimary: "#d90429",
+    iconBottom:"rgba(0, 0, 0, 0.8)",
 };

@@ -1,5 +1,11 @@
 import { Stack } from "expo-router";
 import { useFonts } from "expo-font";
+import { ActivityIndicator } from "react-native";
+import { Colors } from "@/constants/Colors";
+
+export const unstable_settings = {
+  initialRouteName: "(menu)",
+};
 
 export default function RootLayout() {
   const [loaded] = useFonts({
@@ -10,6 +16,21 @@ export default function RootLayout() {
     "Lato-Light": require("../assets/fonts/Lato-Light.ttf"),
     "Lato-SemiBold": require("../assets/fonts/Lato-SemiBold.ttf"),
   });
+
+  if (!loaded) {
+    return (
+      <ActivityIndicator
+        style={{
+          flex: 1,
+          justifyContent: "center",
+          alignItems: "center",
+          backgroundColor: "white",
+        }}
+        color={Colors.primary}
+        size={"large"}
+      />
+    );
+  }
   return (
     <Stack>
       <Stack.Screen

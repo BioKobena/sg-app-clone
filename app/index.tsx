@@ -5,7 +5,9 @@ import {
   Text,
   TouchableOpacity,
   View,
+  Button
 } from "react-native";
+import { useRef } from "react";
 import { StatusBar } from "expo-status-bar";
 import { stylesHome } from "@/styles/home";
 import NotificationButton from "@/components/Button/NotificationButton";
@@ -27,49 +29,47 @@ import { Circle } from "react-native-svg";
 import Amount from "@/components/Button/Amount";
 import { useState } from "react";
 import SimpleButton from "@/components/Button/SimpleButton";
+import RBSheet from "react-native-raw-bottom-sheet";
+import type RBSheetComponent from "react-native-raw-bottom-sheet";
+
+export function Example() {
+  const refRBSheet = useRef(null);
+
+  return (
+    <View style={{ flex: 1 }}>
+      <Button
+        title="OPEN BOTTOM SHEET"
+        // onPress={() => refRBSheet.current.open()}
+      />
+      <RBSheet
+        ref={refRBSheet}
+        useNativeDriver={true}
+        customStyles={{
+          wrapper: {
+            backgroundColor: "transparent",
+          },
+          draggableIcon: {
+            backgroundColor: "#000",
+          },
+        }}
+        customModalProps={{
+          animationType: "slide",
+          statusBarTranslucent: true,
+        }}
+        customAvoidingViewProps={{
+          enabled: false,
+        }}
+      >
+      </RBSheet>
+    </View>
+  );
+}
 
 type Props = {
   isOpen: boolean;
   toogleSheet: () => void;
 };
-// function BottomSheet({ isOpen, toggleSheet, duration = 500, children }: Props) {
-//   const { colorScheme } = useColorScheme();
-//   const height = useSharedValue(0);
-//   const progress = useDerivedValue(() =>
-//     withTiming(isOpen.value ? 0 : 1, { duration })
-//   );
 
-//   const sheetStyle = useAnimatedStyle(() => ({
-//     transform: [{ translateY: progress.value * 2 * height.value }],
-//   }));
-
-//   const backgroundColorSheetStyle = {
-//     backgroundColor: colorScheme === "light" ? "#f8f9ff" : "#272B3C",
-//   };
-
-//   const backdropStyle = useAnimatedStyle(() => ({
-//     opacity: 1 - progress.value,
-//     zIndex: isOpen.value
-//       ? 1
-//       : withDelay(duration, withTiming(-1, { duration: 0 })),
-//   }));
-
-//   return (
-//     <>
-//       <Animated.View style={[sheetStyles.backdrop, backdropStyle]}>
-//         <TouchableOpacity style={styles.flex} onPress={toggleSheet} />
-//       </Animated.View>
-//       <Animated.View
-//         onLayout={(e) => {
-//           height.value = e.nativeEvent.layout.height;
-//         }}
-//         style={[sheetStyles.sheet, sheetStyle, backgroundColorSheetStyle]}
-//       >
-//         {children}
-//       </Animated.View>
-//     </>
-//   );
-// }
 const styles = StyleSheet.create({
   flex: {
     flex: 1,
@@ -139,6 +139,8 @@ export default function Index() {
     setViewAmount(!viewAmount);
   };
 
+  // const refRBSheet = useRef<InstanceType<typeof RBSheet> | null>(null);
+
   return (
     <View
       style={stylesHome.container}
@@ -168,7 +170,7 @@ export default function Index() {
             borderWidth: 7,
             borderColor: Colors.primary,
             borderBlockColor: "transparent",
-            borderRadius:15
+            borderRadius: 15,
           }}
           dotStyle={{
             backgroundColor: "rgba(0, 0, 0, 0.2)",
@@ -234,42 +236,5 @@ export default function Index() {
         <Ionicons name="chevron-up" size={25} />
       </TouchableOpacity>
     </View>
-  );
-}
-
-type JaugProps = {
-  progress: number;
-};
-export function Jauge({ progress }: JaugProps) {
-  const radius = 70;
-  const strokeWidth = 10;
-  const angle = Math.PI * progress;
-
-  const x = radius + radius * Math.cos(Math.PI - angle);
-  const y = radius - radius * Math.sin(Math.PI - angle);
-
-  const d = `
-    M ${radius - radius} ${radius}
-    A ${radius} ${radius} 0 0 1 ${radius + radius} ${radius}
-  `;
-
-  return (
-    <Svg width={radius * 2} height={radius + strokeWidth}>
-      <Path
-        d={d}
-        stroke="#eee"
-        strokeWidth={strokeWidth}
-        fill="none"
-      />
-      <Path
-        d={`
-          M ${radius - radius} ${radius}
-          A ${radius} ${radius} 0 0 1 ${x} ${y}
-        `}
-        stroke="tomato"
-        strokeWidth={strokeWidth}
-        fill="none"
-      />
-    </Svg>
   );
 }
