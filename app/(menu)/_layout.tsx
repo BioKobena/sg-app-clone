@@ -18,11 +18,11 @@ export default function RootLayout() {
     const logoutIcon = () => {
         return (
             <AntDesign
-                name="logout"
+                name="poweroff"
                 color="white"
                 size={25}
                 style={{
-                    transform: "rotate(-90deg)",
+                    transform: "rotate(0deg)",
                     position: "absolute",
                     top: 10,
                     right: 15,
