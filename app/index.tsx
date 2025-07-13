@@ -1,13 +1,13 @@
 import {
+  Button,
   Image,
   SafeAreaView,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
-  Button
 } from "react-native";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { StatusBar } from "expo-status-bar";
 import { stylesHome } from "@/styles/home";
 import NotificationButton from "@/components/Button/NotificationButton";
@@ -16,7 +16,7 @@ import Swiper from "react-native-swiper";
 import Svg, { Path } from "react-native-svg";
 import { Colors } from "@/constants/Colors";
 import { Ionicons } from "@expo/vector-icons";
-import { Link } from "expo-router";
+import { Link, useRouter } from "expo-router";
 import Animated, {
   useAnimatedStyle,
   useDerivedValue,
@@ -37,9 +37,7 @@ export function Example() {
 
   return (
     <View style={{ flex: 1 }}>
-      <Button
-        title="OPEN BOTTOM SHEET"
-        // onPress={() => refRBSheet.current.open()}
+      <Button title="OPEN BOTTOM SHEET"// onPress={() => refRBSheet.current.open()}
       />
       <RBSheet
         ref={refRBSheet}
@@ -139,7 +137,10 @@ export default function Index() {
     setViewAmount(!viewAmount);
   };
 
-  // const refRBSheet = useRef<InstanceType<typeof RBSheet> | null>(null);
+  const router = useRouter();
+  useEffect(() => {
+    router.replace("/(menu)/(cartes)");
+  }, []);
 
   return (
     <View

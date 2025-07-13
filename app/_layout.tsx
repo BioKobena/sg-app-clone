@@ -1,4 +1,5 @@
-import { Stack } from "expo-router";
+import { Stack, useRouter } from "expo-router";
+import React, { useEffect } from "react";
 import { useFonts } from "expo-font";
 import { ActivityIndicator } from "react-native";
 import { Colors } from "@/constants/Colors";
@@ -32,7 +33,7 @@ export default function RootLayout() {
     );
   }
   return (
-    <Stack>
+    <Stack initialRouteName="(menu)">
       <Stack.Screen
         name="index"
         options={{

@@ -3,9 +3,10 @@ import { StyleSheet } from "react-native";
 
 export const stylesVirement = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         flexDirection: "column",
-
+        // paddingLeft: 15,
+        // paddingRight: 15,
     },
     firstModule: {
         width: "100%",

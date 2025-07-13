@@ -7,7 +7,7 @@ export const stylesModule = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         width: "31%",
-        height: "90%",
+        height: "68%",
         backgroundColor: Colors.cardBackground,
         borderRadius: 5,
         shadowColor: "#000",

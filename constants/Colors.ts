@@ -7,7 +7,8 @@ export const Colors = {
     redPrimary: "#d90429",
     iconBottom:"rgba(0, 0, 0, 0.8)",
     cardBackground: "#f8f8f8",
-    cotonWhite : "#fbfbf9",
+    white : "#fbfbf9",
     porcelain: "#fffefc",
-    secondIcon:"#023047"
+    secondIcon:"#023047",
+    blanc:"#ffffff"
 };

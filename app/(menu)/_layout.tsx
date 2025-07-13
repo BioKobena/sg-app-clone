@@ -12,7 +12,7 @@ import { Tabs } from "expo-router";
 import { Colors } from "@/constants/Colors";
 
 export const unstable_settings = {
-    initialRouteName: "index",
+    initialRouteName: "(menu)",
 };
 
 export default function RootLayout() {
@@ -58,7 +58,7 @@ export default function RootLayout() {
                     ),
                     headerStyle: {
                         backgroundColor: Colors.redPrimary,
-                        height: "41%",
+                        height: 150,
                     },
                     headerTitleAlign: "center",
                     headerTintColor: "white",
@@ -84,7 +84,7 @@ export default function RootLayout() {
                     ),
                     headerStyle: {
                         backgroundColor: Colors.redPrimary,
-                        height: "41%",
+                        height: 150,
                     },
                     headerTitleAlign: "center",
                     headerTintColor: "white",
@@ -110,7 +110,7 @@ export default function RootLayout() {
                     ),
                     headerStyle: {
                         backgroundColor: Colors.redPrimary,
-                        height: "41%",
+                        height: 150,
                     },
                     headerTitleAlign: "center",
                     headerTintColor: "white",
@@ -133,7 +133,7 @@ export default function RootLayout() {
                     ),
                     headerStyle: {
                         backgroundColor: Colors.redPrimary,
-                        height: "41%",
+                        height: 150,
                     },
                     headerTitleAlign: "center",
                     headerTintColor: "white",
@@ -155,7 +155,7 @@ export default function RootLayout() {
                     ),
                     headerStyle: {
                         backgroundColor: Colors.redPrimary,
-                        height: "41%",
+                        height: 150,
                     },
                     headerTitleAlign: "center",
                     headerTintColor: "white",
