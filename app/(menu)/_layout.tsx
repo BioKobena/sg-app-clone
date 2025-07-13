@@ -6,6 +6,7 @@ import {
     FontAwesome6,
     Ionicons,
     Octicons,
+    SimpleLineIcons,
 } from "@expo/vector-icons";
 import { Tabs } from "expo-router";
 import { Colors } from "@/constants/Colors";
@@ -17,15 +18,15 @@ export const unstable_settings = {
 export default function RootLayout() {
     const logoutIcon = () => {
         return (
-            <AntDesign
-                name="poweroff"
+            <FontAwesome
+                name="power-off"
                 color="white"
                 size={25}
                 style={{
                     transform: "rotate(0deg)",
                     position: "absolute",
-                    top: 10,
-                    right: 15,
+                    top: 5,
+                    right: 25,
                 }}
             />
         );

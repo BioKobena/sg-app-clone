@@ -1,6 +1,6 @@
 export const Colors = {
     iconColor: "rgba(0, 0, 0, 0.8)",
-    buttonBackgroud: "#ffff",
+    buttonBackgroud: "rgba(255,255, 255, 0.9)",
     textGray: "#eeeeee",
     primary: "#ff220c",
     black: "#28282B",
