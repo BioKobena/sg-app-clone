@@ -8,7 +8,7 @@ export const stylesModule = StyleSheet.create({
         alignItems: "center",
         width: "31%",
         height: "68%",
-        backgroundColor: Colors.cardBackground,
+        backgroundColor: Colors.blanc,
         borderRadius: 5,
         shadowColor: "#000",
         shadowOffset: {

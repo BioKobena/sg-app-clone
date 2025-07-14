@@ -1,5 +1,7 @@
-{
-  "expo": {
+import { ConfigContext, ExpoConfig } from "expo/config";
+export default ({ config }: ConfigContext): ExpoConfig => (
+  {
+    ...config,
     "name": "SG",
     "slug": "sg",
     "version": "1.0.0",
@@ -10,20 +12,20 @@
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.bio-paul.sg"
+      "bundleIdentifier": "com.bio-paul.sg",
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#ffffff",
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.bio_paul.sg"
+      "package": "com.bio_paul.sg",
     },
     "web": {
       "bundler": "metro",
       "output": "static",
-      "favicon": "./assets/images/favicon.png"
+      "favicon": "./assets/images/favicon.png",
     },
     "plugins": [
       "expo-router",
@@ -33,18 +35,27 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff"
-        }
-      ]
+          "backgroundColor": "#ffffff",
+        },
+      ],
+      [
+        "react-native-nfc-manager",
+        {
+          "nfcPermission": "Custom permission message",
+          "selectIdentifiers": ["A0000002471001"],
+          "systemCodes": ["8008"],
+        },
+      ],
     ],
     "experiments": {
-      "typedRoutes": true
+      "typedRoutes": true,
     },
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "1088da75-80e7-4364-9532-8e84084af547"
-      }
-    }
+        "projectId": "1088da75-80e7-4364-9532-8e84084af547",
+      },
+    },
   }
-}
+  // }
+);

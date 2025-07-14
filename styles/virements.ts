@@ -7,6 +7,9 @@ export const stylesVirement = StyleSheet.create({
         flexDirection: "column",
         // paddingLeft: 15,
         // paddingRight: 15,
+        backgroundColor: Colors.blanc,
+        height: "100%",
+        padding: 5,
     },
     firstModule: {
         width: "100%",
@@ -25,6 +28,8 @@ export const stylesVirement = StyleSheet.create({
         padding: 10,
         marginBottom: 10,
         alignItems: "flex-start",
+        marginTop: "-8%",
+
     },
     secondModule: {
         width: "100%",
@@ -36,7 +41,7 @@ export const stylesVirement = StyleSheet.create({
         fontFamily: "Lato-Bold",
         fontSize: 16,
         color: Colors.secondIcon,
-        marginLeft: 10,
+        marginLeft: 0,
         textAlign: "left",
         marginBottom: 10,
     },
