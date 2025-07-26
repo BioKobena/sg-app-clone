@@ -4,9 +4,7 @@ import { useFonts } from "expo-font";
 import { ActivityIndicator } from "react-native";
 import { Colors } from "@/constants/Colors";
 
-export const unstable_settings = {
-  initialRouteName: "(menu)",
-};
+
 
 export default function RootLayout() {
   const [loaded] = useFonts({

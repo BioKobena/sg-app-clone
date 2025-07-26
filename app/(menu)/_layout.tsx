@@ -11,9 +11,9 @@ import {
 import { Tabs } from "expo-router";
 import { Colors } from "@/constants/Colors";
 
-export const unstable_settings = {
-    initialRouteName: "(menu)",
-};
+// export const unstable_settings = {
+//     initialRouteName: "(menu)",
+// };
 
 export default function RootLayout() {
     const logoutIcon = () => {
@@ -40,7 +40,7 @@ export default function RootLayout() {
                 tabBarStyle: {
                     borderTopWidth: 0,
                     height: 60,
-                    padding: 5,
+                    padding: 25,
                 },
                 tabBarLabelStyle: {
                     fontFamily: "Lato-Regular",

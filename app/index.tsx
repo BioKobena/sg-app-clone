@@ -139,7 +139,7 @@ export default function Index() {
 
   const router = useRouter();
   useEffect(() => {
-    router.replace("/(menu)/(autres)");
+    router.replace("/(menu)/(contact)");
   }, []);
 
   return (
